@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'devise'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
+gem 'haml-rails'
 
 
 # Gems used only for assets and not required
