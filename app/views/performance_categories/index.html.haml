@@ -1,0 +1,25 @@
+%h1 Listing performance_categories
+
+%table
+  %tr
+    %th Name
+    %th Begin date
+    %th End date
+    %th Order
+    %th
+    %th
+    %th
+
+  - @performance_categories.each do |performance_category|
+    %tr
+      %td= performance_category.name
+      %td= performance_category.begin_date
+      %td= performance_category.end_date
+      %td= performance_category.order
+      %td= link_to 'Show', performance_category
+      %td= link_to 'Edit', edit_performance_category_path(performance_category)
+      %td= link_to 'Destroy', performance_category, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Performance category', new_performance_category_path

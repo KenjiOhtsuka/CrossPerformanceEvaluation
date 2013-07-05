@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @performance_category.name
+%p
+  %b Begin date:
+  = @performance_category.begin_date
+%p
+  %b End date:
+  = @performance_category.end_date
+%p
+  %b Order:
+  = @performance_category.order
+
+= link_to 'Edit', edit_performance_category_path(@performance_category)
+\|
+= link_to 'Back', performance_categories_path

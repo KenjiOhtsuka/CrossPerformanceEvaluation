@@ -1,4 +1,7 @@
 CrossPerformanceEvaluation::Application.routes.draw do
+  resources :performance_categories
+
+
   devise_for :users
 
   root :to => "home#index"
