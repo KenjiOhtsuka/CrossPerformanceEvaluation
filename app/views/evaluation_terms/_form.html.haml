@@ -1,0 +1,19 @@
+= form_for @evaluation_term do |f|
+  - if @evaluation_term.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@evaluation_term.errors.count, "error")} prohibited this evaluation_term from being saved:"
+      %ul
+        - @evaluation_term.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :begin_date
+    = f.number_field :begin_date
+  .field
+    = f.label :end_date
+    = f.number_field :end_date
+  .field
+    = f.label :memo
+    = f.text_field :memo
+  .actions
+    = f.submit 'Save'

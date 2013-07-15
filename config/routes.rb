@@ -1,4 +1,7 @@
 CrossPerformanceEvaluation::Application.routes.draw do
+  resources :evaluation_terms
+
+
   resources :performance_categories
 
 

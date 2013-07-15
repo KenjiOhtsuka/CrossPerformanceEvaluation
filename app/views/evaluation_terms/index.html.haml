@@ -1,0 +1,23 @@
+%h1 Listing evaluation_terms
+
+%table
+  %tr
+    %th Begin date
+    %th End date
+    %th Memo
+    %th
+    %th
+    %th
+
+  - @evaluation_terms.each do |evaluation_term|
+    %tr
+      %td= evaluation_term.begin_date
+      %td= evaluation_term.end_date
+      %td= evaluation_term.memo
+      %td= link_to 'Show', evaluation_term
+      %td= link_to 'Edit', edit_evaluation_term_path(evaluation_term)
+      %td= link_to 'Destroy', evaluation_term, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Evaluation term', new_evaluation_term_path

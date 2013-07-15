@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Begin date:
+  = @evaluation_term.begin_date
+%p
+  %b End date:
+  = @evaluation_term.end_date
+%p
+  %b Memo:
+  = @evaluation_term.memo
+
+= link_to 'Edit', edit_evaluation_term_path(@evaluation_term)
+\|
+= link_to 'Back', evaluation_terms_path

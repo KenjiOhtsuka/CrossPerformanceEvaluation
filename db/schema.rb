@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130705133450) do
+ActiveRecord::Schema.define(:version => 20130715032745) do
+
+  create_table "evaluation_terms", :force => true do |t|
+    t.integer  "begin_date", :limit => 8, :null => false
+    t.integer  "end_date",   :limit => 8, :null => false
+    t.string   "memo"
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+  end
 
   create_table "performance_categories", :force => true do |t|
     t.string   "name",                                    :null => false
