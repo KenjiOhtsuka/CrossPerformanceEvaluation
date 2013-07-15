@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require jquery.ui.all
 //= require twitter/bootstrap
+// require pjax
+//= require jquery.pjax
 //= require_tree .
 
 $(document).ready(function(){

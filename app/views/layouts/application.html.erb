@@ -4,9 +4,15 @@
   <title>CrossPerformanceEvaluation</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <%=coffee_script_tag do%>
+    $('a:not([data-remote]):not([data-behavior]):not([data-skip-pjax])').pjax('[data-pjax-container]')
+    jQuery ->
+      $(a).pjax('[data-pjax-container]')
+  <%end%>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div date-pjax-container>
   <p class="notice"><%=notice%></p>
   <p class="alert"><%=alert%></p>
   <div id='user_nav'>
@@ -18,5 +24,6 @@
     <%end%>
   </div>
 <%= yield %>
+  </div>
 </body>
 </html>

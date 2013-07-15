@@ -12,6 +12,8 @@ gem 'twitter-bootstrap-rails'
 gem 'haml-rails'
 gem 'annotator'
 gem 'jquery-ui-rails'
+gem 'coffeebeans'
+gem 'rack-pjax'
 
 
 # Gems used only for assets and not required

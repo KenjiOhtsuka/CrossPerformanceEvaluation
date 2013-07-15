@@ -20,6 +20,6 @@
     = f.text_field :end_date, :class => "datepicker"
   .field
     = f.label :order
-    = f.number_field :order
+    = f.number_field :order, {:style => "text-align:right;"}
   .actions
     = f.submit 'Save'

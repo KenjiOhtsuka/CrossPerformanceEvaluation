@@ -40,6 +40,9 @@ class PerformanceCategoriesController < ApplicationController
   # POST /performance_categories
   # POST /performance_categories.json
   def create
+    params[:performance_category][:begin_date] = params[:performance_category][:begin_date].delete('-')
+    params[:performance_category][:end_date] = params[:performance_category][:end_date].delete('-')
+
     @performance_category = PerformanceCategory.new(params[:performance_category])
 
     respond_to do |format|
