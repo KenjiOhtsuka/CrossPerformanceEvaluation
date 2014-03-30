@@ -6,24 +6,22 @@
   <%= javascript_include_tag "application" %>
   <%=coffee_script_tag do%>
     $('a:not([data-remote]):not([data-behavior]):not([data-skip-pjax])').pjax('[data-pjax-container]')
-    jQuery ->
-      $(a).pjax('[data-pjax-container]')
   <%end%>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div date-pjax-container>
-  <p class="notice"><%=notice%></p>
-  <p class="alert"><%=alert%></p>
-  <div id='user_nav'>
-    <%if user_signed_in?%>
-    Signed in as <%=current_user.email%>. <%=link_to "Sign out", destroy_user_session_path, :method => :delete%>
-    <%else%>
-      <%=link_to "Sign up", new_user_registration_path%>
-      <%=link_to "Sign in", new_user_session_path%>
-    <%end%>
-  </div>
-<%= yield %>
+    <p class="notice"><%=notice%></p>
+    <p class="alert"><%=alert%></p>
+    <div id='user_nav'>
+      <%if user_signed_in?%>
+      Signed in as <%=current_user.email%>. <%=link_to "Sign out", destroy_user_session_path, :method => :delete%>
+      <%else%>
+        <%=link_to "Sign up", new_user_registration_path%>
+        <%=link_to "Sign in", new_user_session_path%>
+      <%end%>
+    </div>
+  <div data-pjax-container>
+    <%= yield %>
   </div>
 </body>
 </html>

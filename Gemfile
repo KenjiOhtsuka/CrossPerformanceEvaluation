@@ -13,6 +13,7 @@ gem 'haml-rails'
 gem 'annotator'
 gem 'jquery-ui-rails'
 gem 'coffeebeans'
+#gem 'pjax_rails'
 gem 'rack-pjax'
 
 
